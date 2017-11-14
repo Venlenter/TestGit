@@ -27,10 +27,6 @@ public class HelloWorld {
         tstruct.clear();
         Hashtable<String, String> table = new Hashtable<>(tstruct);
 
-
-
-
-
         /*
         ArrayList<String> strList = new ArrayList<>();
         strList.add("ven");
