@@ -39,5 +39,6 @@ public class Worker {
     }
 
     private static void test(String hello) {
+        System.out.println(hello);
     }
 }
