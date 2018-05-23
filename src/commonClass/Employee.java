@@ -1,9 +1,15 @@
-package extendClass;
+package commonClass;
 
-public class Employee implements Comparable{
+import interfaceClass.ShallowCopyTeacher;
+
+import java.time.temporal.TemporalAccessor;
+import java.util.Date;
+
+public class Employee implements Comparable, Cloneable{
     private String name;
     private double salary;
-    private String hireDay;
+    private Date hireDay;
+    private ShallowCopyTeacher teacher;
 
     public String getName() {
         return name;
@@ -13,12 +19,20 @@ public class Employee implements Comparable{
         this.name = name;
     }
 
-    public String getHireDay() {
+    public Date getHireDay() {
         return hireDay;
     }
 
-    public void setHireDay(String hireDay) {
+    public void setHireDay(Date hireDay) {
         this.hireDay = hireDay;
+    }
+
+    public ShallowCopyTeacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(ShallowCopyTeacher teacher) {
+        this.teacher = teacher;
     }
 
     public double getSalary() {
@@ -32,7 +46,7 @@ public class Employee implements Comparable{
     public Employee() {
     }
 
-    public Employee(String name, double salary, String hireDay) {
+    public Employee(String name, double salary, Date hireDay) {
         this.name = name;
         this.salary = salary;
         this.hireDay = hireDay;
@@ -46,5 +60,9 @@ public class Employee implements Comparable{
     public int compareTo(Object otherObject) {
         Employee other = (Employee) otherObject;
         return Double.compare(salary, other.salary);
+    }
+
+    public Employee clone() throws CloneNotSupportedException {
+        return (Employee) super.clone();
     }
 }

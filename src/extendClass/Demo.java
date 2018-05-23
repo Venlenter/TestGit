@@ -1,23 +1,27 @@
 package extendClass;
 
+import commonClass.Employee;
+import interfaceClass.ShallowCopyTeacher;
+
 import java.lang.reflect.*;
-import java.util.Arrays;
+import java.util.Date;
 
 public class Demo {
-    public static void main(String[] args) {
-        Employee[] employees = new Employee[3];
-        employees[0] = new Employee("Harry", 80000, "1991");
-        employees[1] = new Employee("Potter", 30000, "1992");
-        employees[2] = new Employee("Mary", 50000, "1993");
+    public static void main(String[] args) throws Exception {
+
+        /*Employee[] employees = new Employee[3];
+        employees[0] = new Employee("Harry", 80000, new Date(1994, 10,13));
+        employees[1] = new Employee("Potter", 30000, new Date(1994, 10,13));
+        employees[2] = new Employee("Mary", 50000, new Date(1994, 10,13));
         Arrays.sort(employees);
         for (Employee e : employees) {
             System.out.println("name=" + e.getName() + ", salary=" + e.getSalary());
-        }
+        }*/
 
         /*Employee[] employees = new Employee[3];
-        employees[0] = new Employee("Harry", 50000, "1991");
-        employees[1] = new Employee("Potter", 50000, "1992");
-        employees[2] = new Employee("Mary", 50000, "1993");
+        employees[0] = new Employee("Harry", 50000, new Date(1994, 10,13));
+        employees[1] = new Employee("Potter", 50000, new Date(1994, 10,13));
+        employees[2] = new Employee("Mary", 50000, new Date(1994, 10,13));
         //Object newArray = goodCopyOf(employees, 6);
         try {
             Method m1 = Employee.class.getMethod("getName");
@@ -27,7 +31,7 @@ public class Demo {
             e.printStackTrace();
         }*/
 
-        /*Employee harry = new Employee("Harry Potter", 50000, "1990");
+        /*Employee harry = new Employee("Harry Potter", 50000, new Date(1994, 10,13));
         Class c1 = harry.getClass();
         try {
             Field f = c1.getDeclaredField("name");
@@ -57,7 +61,7 @@ public class Demo {
 
         /*Manager[] managers = new Manager[10];
         Employee[] employees = managers;
-        managers[0] = new Manager("Boss", 80000, "1987");
+        managers[0] = new Manager("Boss", 80000, new Date(1994, 10,13));
         managers[0].setBonus(100);
         if (employees[0] instanceof Manager) {
             System.out.println("employees[0] instanceof Manager：" + ((Manager) employees[0]).getBonus());
@@ -66,10 +70,10 @@ public class Demo {
         }*/
 
         /*Employee[] staff = new Employee[3];
-        Manager boss = new Manager("Boss", 80000, "1987");
+        Manager boss = new Manager("Boss", 80000, new Date(1994, 10,13));
         staff[0] = boss;
-        staff[1] = new Employee("Harry", 50000, "1990");
-        staff[2] = new Employee("Tony", 40000, "1994");
+        staff[1] = new Employee("Harry", 50000, new Date(1994, 10,13));
+        staff[2] = new Employee("Tony", 40000, new Date(1994, 10,13));
         for (Employee e : staff) {
             System.out.println(e.getName() + " " + e.getSalary());
         }*/

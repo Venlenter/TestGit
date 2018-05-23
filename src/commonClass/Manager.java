@@ -1,9 +1,11 @@
-package extendClass;
+package commonClass;
+
+import java.util.Date;
 
 public class Manager extends Employee {
     private double bonus;
 
-    public Manager(String name, double salary, String hireDay) {
+    public Manager(String name, double salary, Date hireDay) {
         super(name, salary, hireDay);
         bonus = 0;
     }
