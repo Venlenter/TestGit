@@ -15,7 +15,7 @@ public class TalkingClock {
         this.beep = beep;
     }
 
-    public void start() {
+    public void start(int interval, boolean beep) {
         class TimePrinter implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent event) {
