@@ -1,14 +1,31 @@
 package interfaceClass;
 
-import javax.swing.*;
-import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionEvent;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 public class Demo {
     public static void main(String[] args) {
-        TalkingClock clock = new TalkingClock(1000, true);
-        clock.start(1000,true);
-        JOptionPane.showMessageDialog(null, "Quit");;
-        System.exit(0);
+
+        /*double[] d = new double[20];
+        for (int i = 0; i < d.length; i++) {
+            d[i] = 100 * Math.random();
+        }
+        ArrayAlg.Pair p = ArrayAlg.minmax(d);
+        System.out.println("min= " + p.getFirst());
+        System.out.println("max= " + p.getSecond());*/
+
+        /*ArrayList<String> friends = new ArrayList<>();
+        friends.add("Mary");
+        friends.add("Harry");
+
+        new ArrayList<String>() {{ add("Mary"); add("Harry"); }};*/
+
+        /*TalkingClock clock = new TalkingClock(1000, true);
+        clock.start(1000, true);
+        JOptionPane.showMessageDialog(null, "Quit");
+        System.exit(0);*/
 
         /*ActionListener listener = new TimePrinter();
         //ms,10s
