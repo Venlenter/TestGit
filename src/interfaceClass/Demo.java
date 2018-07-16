@@ -2,12 +2,21 @@ package interfaceClass;
 
 import javax.swing.JOptionPane;
 import java.awt.event.ActionEvent;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class Demo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IndexOutOfBoundsException, Exception{
+        throw new EOFException("Hello World");
 
+        /*try {
+            FileInputStream fileInputStream = new FileInputStream("");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }*/
         /*double[] d = new double[20];
         for (int i = 0; i < d.length; i++) {
             d[i] = 100 * Math.random();

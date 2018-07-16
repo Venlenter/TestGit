@@ -1,4 +1,10 @@
 package exceptionClass;
 
-public class FileFormatException {
+import java.io.IOException;
+
+public class FileFormatException extends IOException {
+    public FileFormatException() {}
+    public FileFormatException(String gripe) {
+        super(gripe);
+    }
 }
