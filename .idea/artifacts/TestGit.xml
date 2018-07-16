@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TestGit">
+    <output-path>$PROJECT_DIR$/out/artifacts/TestGit</output-path>
+    <root id="archive" name="TestGit.war" />
+  </artifact>
+</component>
