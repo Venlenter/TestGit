@@ -11,12 +11,16 @@ import java.util.Date;
 
 public class Demo {
     public static void main(String[] args) throws FileNotFoundException {
-        Father[] fathers = new Father[3];
-        System.out.println((fathers[0] == null));
-        Object obj = new Object();
-        Runtime.getRuntime().addShutdownHook(new Thread());
-        Date today = new Date(123);
-        Math.sqrt(2);
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
+        System.out.println(name);
+        System.out.println(in.next());
+//        Father[] fathers = new Father[3];
+//        System.out.println((fathers[0] == null));
+//        Object obj = new Object();
+//        Runtime.getRuntime().addShutdownHook(new Thread());
+//        Date today = new Date(123);
+//        Math.sqrt(2);
 
 
 
