@@ -7,13 +7,22 @@ import java.util.*;
 
 public class Demo {
     public static void main(String[] args) {
-        SortedSet<String> sorter = new TreeSet<>();
-        sorter.add("Bob");
-        sorter.add("Amy");
-        sorter.add("Carl");
-        sorter.forEach(s -> System.out.println(s));
-        ItemComparator comp = new ItemComparator();
-        SortedSet<Manager> sortByBonus = new TreeSet<>(comp);
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("111");
+        List<String> synchronizedList = Collections.synchronizedList(arrayList);
+        synchronizedList.add("aaa");
+        synchronizedList.add("bbb");
+        for (int i = 0; i < synchronizedList.size(); i++) {
+            System.out.println(synchronizedList.get(i));
+        }
+
+//        SortedSet<String> sorter = new TreeSet<>();
+//        sorter.add("Bob");
+//        sorter.add("Amy");
+//        sorter.add("Carl");
+//        sorter.forEach(s -> System.out.println(s));
+//        ItemComparator comp = new ItemComparator();
+//        SortedSet<Manager> sortByBonus = new TreeSet<>(comp);
 
         //SetTest
 //        Set<String> words = new HashSet<>();

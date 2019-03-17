@@ -1,5 +1,6 @@
 package model;
 
+import aSync.syncDemo;
 import com.sun.org.apache.bcel.internal.generic.GOTO;
 
 import java.io.File;
@@ -10,7 +11,14 @@ import java.sql.*;
 import java.util.Date;
 
 public class Demo {
+    public void test() {
+        syncDemo.main(null);
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
+        Map<String, String> map = new HashMap<>();
+        map.put("", "");
+
         Scanner in = new Scanner(System.in);
         String name = in.nextLine();
         System.out.println(name);
